@@ -1,0 +1,56 @@
+* Binaire
+      1  1  1  1 1 1 1 1
+    128 64 32 16 8 4 2 1
+
+Méthode soustraction binaire
+    - Convertir 133 (base 10) en base 7
+
+        133 (base 10) = ? (base 7)
+
+        # Choisir une puissance selon la base --> 7, 49, 343
+        # Et la multiplier jusqu'à se rapprocher du nombre
+
+        133 - (49 * 2) = 35
+        35 - (7 * 5) = 0
+
+        # Quand on atteint la dernière puissance, la méthode est terminée
+        # On utilise les chiffres multipliés pour former la réponse
+
+        133 (base 10) = (7^2) * 2 + (7^1) * 5 + (7^0) * 0 = 250 (base 7)
+
+Métohde divisions successifs
+    - Convertir 133 (base 10) en base 2
+
+        133 / 2 = 66 +  1
+        66 / 2 = 33 +   0
+        33 / 2 = 16 +   1
+        16 / 2 = 8 +    0
+        8 / 2 = 4 +     0
+        4 / 2 = 2 +     0
+        2 / 2 = 1 +     0
+        1 / 2 = 0 +     1
+
+        # Inverser le résultat (de bas en haut)
+
+        133 (base 10) = 10000101 (base 2)
+
+Méthode en passent par la base binaire
+    - Convertir 133 (base 10) en base 16
+
+        133 (base 10) = 10000101 (base 2) * Voir résultat plus haut
+
+        10000101 (base 2) = ? (base 16)
+        1000 0101 (base 2) = 85 (base 16) 
+
+    
+    - Convertir 133 (base 10) en base 8
+
+        # Ajouter un 0 si le nombre n'est pas divisible en 3
+
+        10000101 (base 2) = ? (base 8)
+        010 000 101 (base 2) = 205 (base 8) 
+
+    - Convertir 133 (base 10) en base 4
+
+        10000101 (base 2) = ? (base 4)
+        10 00 01 01 (base 2) = 2011 (base 4) 
