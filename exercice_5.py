@@ -21,12 +21,18 @@ def romain(n):
     texte = ''
     if (n // 1000 != 0):
         texte += repeter(extraireChiffre(n, 1000), 'M')
-    elif(n // 100 != 0):
+    if(n // 100 != 0):
         texte += chiffreRomain(extraireChiffre(n, 100), 'C', 'D', 'M')
-    elif(n // 10 != 0):
-        texte += chiffreRomain(extraireChiffre(n, 100), 'X', 'L', 'C')
-    else:
-        texte += chiffreRomain(extraireChiffre(n, 100), 'I', 'V', 'X')
+    if(n // 10 != 0):
+        texte += chiffreRomain(extraireChiffre(n, 10), 'X', 'L', 'C')
+    if(n // 1 != 0):
+        texte += chiffreRomain(extraireChiffre(n, 1), 'I', 'V', 'X')
     return texte
 
-print(romain(389))
+def testRomain():
+    if romain(8) != 'VIII' : print('Bogue : romain(8) != VIII')
+    if romain(40) != 'XL' : print('Bogue : romain(40) != XL')
+    if romain(900) != 'CM' : print('Bogue : romain(900) != CM')
+    if romain(2000) != 'MM' : print('Bogue : romain(2000) != MM')
+
+testRomain()
